@@ -1,162 +1,86 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reformas en Madrid | Alicatado, Ventanas y Puertas - ObraKai</title>
+<br>
+<strong>— Laura, Getafe</strong>
+</div>
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-}
+<div class="review">
+⭐⭐⭐⭐⭐
+<p>
+Nos instalaron las ventanas y quedó genial.
+</p>
+<br>
+<strong>— Javier, Leganés</strong>
+</div>
 
-header {
-    background: #111;
-    color: white;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
+</div>
 
-header img {
-    height: 60px;
-}
-
-.hero {
-    background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') no-repeat center/cover;
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 42px;
-}
-
-.hero p {
-    font-size: 18px;
-}
-
-.btn {
-    display: inline-block;
-    margin: 10px;
-    background: #ff6a00;
-    color: white;
-    padding: 14px 22px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-}
-
-.section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.card {
-    background: white;
-    padding: 20px;
-    width: 260px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.gallery img {
-    width: 300px;
-    border-radius: 10px;
-    margin: 10px;
-}
-
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    padding: 15px;
-    border-radius: 50%;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-footer {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-</style>
-
-</head>
-
-<body>
-
-<header>
-    <img src="logo.png" alt="ObraKai Logo">
-    <span>OBRAKAI | Reformas en Madrid</span>
-</header>
-
-<section class="hero">
-    <h1>Reformas profesionales en Madrid</h1>
-    <p>Presupuesto en menos de 24h · Trabajo serio y garantizado</p>
-
-    <a href="tel:+34681937562" class="btn">📞 Llamar ahora</a>
-    <a href="https://wa.me/34681937562" class="btn">💬 WhatsApp</a>
 </section>
 
-<section class="section">
-    <h2>Servicios</h2>
-    <div class="services">
-        <div class="card">Alicatado de baños y cocinas</div>
-        <div class="card">Instalación de ventanas</div>
-        <div class="card">Montaje de puertas</div>
-        <div class="card">Pladur y tabiquería</div>
-        <div class="card">Suelos (cerámica, tarima, etc.)</div>
-        <div class="card">Reformas integrales</div>
-    </div>
-</section>
+<section id="contacto">
 
-<section class="section">
-    <h2>Trabajos realizados</h2>
-    <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d">
-        <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e">
-    </div>
-</section>
+<div class="section-title">
+<h2>Pide tu presupuesto</h2>
+<p>Respuesta rápida por WhatsApp</p>
+</div>
 
-<section class="section">
-    <h2>¿Por qué elegir ObraKai?</h2>
-    <p>
-    ✔ Presupuesto rápido<br>
-    ✔ Atención en Madrid y alrededores<br>
-    ✔ Trabajo limpio y profesional<br>
-    ✔ Experiencia en todo tipo de reformas
-    </p>
-</section>
+<div class="contact-form">
 
-<section class="section">
-    <h2>Contacto</h2>
-    <p>📞 +34 681 93 75 62</p>
-    <p>📍 Madrid, España</p>
-</section>
+<form onsubmit="enviarWhatsApp(); return false;">
 
-<a href="https://wa.me/34681937562" class="whatsapp-float">💬</a>
+<input type="text" id="nombre" placeholder="Tu nombre" required>
+
+<input type="tel" id="telefono" placeholder="Tu teléfono" required>
+
+<select id="servicio">
+<option>Alicatado</option>
+<option>Ventanas</option>
+<option>Puertas</option>
+<option>Pladur</option>
+<option>Suelos</option>
+<option>Reforma integral</option>
+</select>
+
+<textarea id="mensaje" placeholder="Describe lo que necesitas" rows="5"></textarea>
+
+<button type="submit">Enviar por WhatsApp</button>
+
+</form>
+
+</div>
+
+</section>
 
 <footer>
-    © 2026 ObraKai Reformas | Madrid
+
+<h3>ObraKai Reformas</h3>
+<p>Madrid, España</p>
+<p>📞 +34 681 93 75 62</p>
+
 </footer>
+
+<a class="whatsapp" href="https://wa.me/34681937562?text=Hola%20quiero%20un%20presupuesto">
+💬
+</a>
+
+<script>
+
+function enviarWhatsApp(){
+
+let nombre=document.getElementById('nombre').value;
+let telefono=document.getElementById('telefono').value;
+let servicio=document.getElementById('servicio').value;
+let mensaje=document.getElementById('mensaje').value;
+
+let texto=`Hola, soy ${nombre}%0A
+Teléfono: ${telefono}%0A
+Servicio: ${servicio}%0A
+Detalles: ${mensaje}`;
+
+window.open(`https://wa.me/34681937562?text=${texto}`,'_blank');
+
+}
+
+</script>
 
 </body>
 </html>
